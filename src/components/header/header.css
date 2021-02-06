@@ -1,0 +1,36 @@
+.header {
+  background-color: rgb(252, 169, 101);
+}
+
+.h-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.h-link{
+  font-size: 25px;
+  line-height: 30px;
+  padding: 10px 10px 10px 10px;
+  color: black;
+}
+
+.h-link:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .h-link{
+    font-size: 20px;
+    line-height: 25px;
+    padding: 5px 5px 5px 5px;
+    color: black;
+  }
+}

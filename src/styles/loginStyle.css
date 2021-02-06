@@ -1,0 +1,21 @@
+.switch-link{
+  margin-left: 5px;
+}
+
+.switch-link:hover{
+  cursor: pointer;
+  color: rgb(245, 78, 0);
+}
+
+.wrapper{
+  padding-top: 25px;
+}
+
+.login-form{
+  margin-top: 75px;
+  padding: 20px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(240, 158, 243);
+}

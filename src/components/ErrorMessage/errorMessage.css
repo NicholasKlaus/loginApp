@@ -1,0 +1,10 @@
+.e-message__wrap{
+  max-width: 750px;
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: #fff;
+  background-color: #721c24;
+  border: none;
+}
