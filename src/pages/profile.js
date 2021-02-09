@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Header} from '../components/index';
 import {Redirect} from 'react-router-dom';
 import {ROUTES} from "../constants/routes";
 import {Button} from 'react-bootstrap';
 
 export const Profile = ({user, handleLogout}) => {
-
 
   return(
     <div className="profile">

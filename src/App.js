@@ -85,6 +85,16 @@ function App() {
     })
   }
 
+  useEffect( () => {
+    const isLogged = localStorage.getItem('isLogged') ? JSON.parse(localStorage.getItem('isLogged')) : [];
+    setUser(isLogged);
+    
+  }, []);
+
+  useEffect( () => {
+    localStorage.setItem('isLogged', JSON.stringify(user));
+  }, [user]);
+
   useEffect(() => {
     authListener();
   }, [])
