@@ -8,7 +8,7 @@ import {Spinner} from 'react-bootstrap';
 
 export const News = () => {
   const API_KEY ="ed70173bd41d41b99323bf07a5b7db55";
-  const url =`http://newsapi.org/v2/everything?q=tesla&from=2021-01-06&sortBy=publishedAt&apiKey=${API_KEY}`
+  const url =`https://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=${API_KEY}`
   const [newsData, setNewsData] = useState([]);
   const [wReqFail, setWReqFail] = useState(false);
   const [loading, setLoading] = useState(true);
