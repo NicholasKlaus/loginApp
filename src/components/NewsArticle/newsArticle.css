@@ -4,7 +4,8 @@
 }
 
 .article-body{
-
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .title{
@@ -25,16 +26,10 @@
   font-weight: 400;
 }
 
-.description{
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 400;
-}
-
 .date{
   font-size: 25px;
   line-height: 30px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 @media (max-width: 576px) {
@@ -56,15 +51,14 @@
     font-weight: 400;
   }
   
-  .description{
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-  
   .date{
+    padding-bottom: 10px;
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: 600;
+  }
+
+  .slick-dots{
+    bottom: -75px;
   }
 }

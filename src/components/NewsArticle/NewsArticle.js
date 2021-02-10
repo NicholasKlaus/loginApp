@@ -7,10 +7,8 @@ export const NewsArticle = ({ el }) => {
     <div className="article">
         <div className="article-body">
           <h1 className="title">{el.title}</h1>
-          <h2 className="subtitle">{el.author}</h2>
-          <p className="content">{el.content}</p>
-          <p className="description">{el.description}</p>
-          <span className="date">{el.publishedAt}</span>
+          <p className="content">{el.excerpt}</p>
+          <span className="date">{el.publishedDateTime}</span>
         </div>
       </div>
   );

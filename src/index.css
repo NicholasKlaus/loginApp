@@ -1,4 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 @import "./styles/index.css";
 
 body {
@@ -21,5 +23,5 @@ code {
 
 .container{
   width: unset!important;
-  max-width: 1170px!important;
+  max-width: 1180px!important;
 }

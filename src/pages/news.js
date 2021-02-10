@@ -7,8 +7,6 @@ import {
 import {Spinner} from 'react-bootstrap';
 
 export const News = () => {
-  const API_KEY ="ed70173bd41d41b99323bf07a5b7db55";
-  const url =`https://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=${API_KEY}`
   const [newsData, setNewsData] = useState([]);
   const [wReqFail, setWReqFail] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -25,9 +23,15 @@ export const News = () => {
   }, [newsData]);
 
   function getNewsData() {
-    fetch(url)
+    fetch("https://coronavirus-smartable.p.rapidapi.com/news/v1/US/", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": "77f7fc5b09mshe91b7e9e85ec99fp1fc50fjsn1c7c400046ed",
+        "x-rapidapi-host": "coronavirus-smartable.p.rapidapi.com"
+      }
+    })
     .then(res => res.json())
-    .then(news => setNewsData(news.articles))
+    .then(res => setNewsData(res.news))
     .catch(err => {
       setWReqFail(true);
     });
