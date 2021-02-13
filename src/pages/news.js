@@ -5,11 +5,14 @@ import {
   NewsList
 } from '../components/index';
 import {Spinner} from 'react-bootstrap';
+import {Pagination} from '../components/Pagination/Pagination';
 
 export const News = () => {
   const [newsData, setNewsData] = useState([]);
   const [wReqFail, setWReqFail] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [newsPerPage, setNewsPerPage] = useState(5);
 
 
   useEffect(() => {
@@ -37,6 +40,14 @@ export const News = () => {
     });
   }
 
+  //Get current news
+  const indexOfLastNews = currentPage * newsPerPage;
+  const indexOfFirstNews = indexOfLastNews - newsPerPage;
+  const currentNewsPage = newsData.slice(indexOfFirstNews, indexOfLastNews);
+
+  //Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return(
     <div className="news">
       <Header />
@@ -53,7 +64,8 @@ export const News = () => {
             (
               <div className="n-body">
                 <div className="n-wrap">
-                  <NewsList data={newsData} />
+                  <Pagination newsPerPage={newsPerPage} totalPage={newsData.length} paginate={paginate} />
+                  <NewsList data={currentNewsPage} />
                 </div>
               </div>
             )
